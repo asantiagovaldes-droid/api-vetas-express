@@ -1,20 +1,28 @@
 {
+  "name": "api-ventas-express",
+  "version": "1.0.0",
+  "description": "API REST para ventas y productos",
+  "main": "src/server.js",
+  "type": "module",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "nodemon src/server.js",
+    "test": "node --test"
+  },
   "dependencies": {
+    "cors": "^2.8.5",
     "dotenv": "^18.0.5",
     "express": "^5.2.1",
     "mysql2": "^3.24.5"
   },
-  "type": "module",
-  "name": "api-ventas-express",
-  "version": "1.0.0",
-  "description": "",
-  "main": "server.js",
-  "devDependencies": {},
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+  "devDependencies": {
+    "nodemon": "^3.1.7"
   },
-  "keywords": [],
+  "keywords": [
+    "api",
+    "express",
+    "ventas"
+  ],
   "author": "",
   "license": "ISC"
 }

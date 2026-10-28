@@ -38,3 +38,12 @@ BEGIN
 
     SELECT LAST_INSERT_ID() AS id_producto, 'Producto registrado' AS mensaje;
 END;
+
+
+
+SHOW TABLES;
+DESCRIBE productos;
+DESCRIBE ventas;
+SELECT * FROM clientes LIMIT 5;
+SELECT * FROM productos LIMIT 5;
+SELECT * FROM ventas LIMIT 5;

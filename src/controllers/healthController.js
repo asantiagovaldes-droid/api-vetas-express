@@ -1,7 +1,10 @@
 export const healthController = (req, res) => {
   return res.status(200).json({
-    status: 'success',
+    success: true,
+    timestamp: new Date().toISOString(),
     message: 'API funcionando correctamente.',
-    uptime: process.uptime()
+    data: {
+      uptime: Number(process.uptime().toFixed(2))
+    }
   });
 };

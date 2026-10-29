@@ -1,8 +1,14 @@
 export const errorHandler = (err, req, res, next) => {
-  const statusCode = err.statusCode || err.status || 500;
+  const statusCode = Number.isInteger(err.statusCode)
+    ? err.statusCode
+    : Number.isInteger(err.status)
+      ? err.status
+      : 500;
 
   const response = {
-    status: 'error',
+    success: false,
+    data: null,
+    timestamp: new Date().toISOString(),
     message: err.message || 'Error interno del servidor'
   };
 
